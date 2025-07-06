@@ -1,0 +1,236 @@
+/* 
+
+Mobile-First approach - Travel Agency
+Author: Matej Pecho
+
+*/
+
+/* -- CSS -- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --brownColor: #33292a;
+  --backgroundColor: #644b4f;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+p {
+  margin: 23px 0;
+}
+img {
+  width: 100%;
+}
+
+.page-section {
+  padding: 60px 0;
+}
+.section-wrapper {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(209, 209, 209);
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* -- Navigation -- */
+.navigation {
+  height: 67px;
+  background-color: var(--brownColor);
+  position: relative;
+}
+
+.navigation-items {
+  display: none;
+}
+
+.navigation-burger {
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 40px;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+/* -- Intro section -- */
+.intro {
+  background-image: url(images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  height: calc(100vh - 67px);
+}
+
+.intro-content {
+  height: inherit;
+  position: relative;
+}
+
+.intro-text {
+  position: absolute;
+  right: 0;
+  bottom: 38px;
+  color: white;
+}
+
+.intro-text span {
+  display: block;
+  text-align: right;
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 5px;
+  word-wrap: normal;
+}
+
+/* -- What we do section -- */
+.what-do {
+  background-color: var(--brownColor);
+  color: white;
+}
+.what-do-content {
+  text-align: center;
+}
+.what-do-activities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-do-activity span {
+  display: block;
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.what-do-activity img {
+  height: 80px;
+  width: auto;
+  margin-top: 40px;
+}
+
+.our-trips-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-image {
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.trip-image h2 {
+  padding: 30px 0;
+}
+
+.trip-image img {
+  height: 300px; /* Or any consistent height */
+  object-fit: cover;
+  flex: 1;
+  border-radius: 4px;
+}
+
+.badge {
+  height: inherit;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 391px) {
+  .section-wrapper {
+    margin: 0 auto;
+    width: 65%;
+  }
+}
+
+/* TABLET */
+/* -- TABLET - About us section -- */
+@media (min-width: 768px) {
+  .about-us-content {
+    display: flex;
+    gap: 20px;
+  }
+  .about-us-text {
+    width: 50%;
+  }
+
+  .about-us-image {
+    width: 50%;
+  }
+  .about-us-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* -- TABLET - What we do section -- */
+@media (min-width: 768px) {
+  .what-do-activities {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .our-trips-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .trip-image {
+    width: 30%;
+    border-radius: 4px;
+  }
+}
+
+/* -- DESKTOP -- */
+/* -- DESKTOP - Navigation -- */
+@media (min-width: 1023px) {
+  .navigation-burger {
+    display: none;
+  }
+  .navigation-items {
+    display: block;
+  }
+  .navigation-items {
+    height: 67px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation-items li {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
