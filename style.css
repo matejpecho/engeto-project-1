@@ -52,11 +52,16 @@ a:visited {
   cursor: pointer;
 }
 
+.section-wrapper {
+  margin: 0 auto;
+  width: 65%;
+}
+
 /* -- Navigation -- */
 .navigation {
   height: 67px;
   background-color: var(--brownColor);
-  position: relative;
+  display: block;
 }
 
 .navigation-items {
@@ -160,7 +165,7 @@ a:visited {
 }
 
 .badge {
-  height: inherit;
+  height: 80px;
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
@@ -232,24 +237,17 @@ a:visited {
   color: #fff;
 }
 
-@media (min-width: 391px) {
-  .section-wrapper {
-    margin: 0 auto;
-    width: 65%;
-  }
-}
-
 /* TABLET */
 /* -- TABLET/DESKTOP - About us section -- */
 @media (min-width: 768px) {
   .about-us-content {
     display: flex;
     gap: 20px;
+    align-items: stretch;
   }
   .about-us-text {
     width: 50%;
   }
-
   .about-us-image {
     width: 50%;
   }
@@ -276,6 +274,12 @@ a:visited {
   .trip-image {
     width: 30%;
     border-radius: 4px;
+  }
+}
+/* -- TABLET/DESKTOP - Our trips -- */
+@media (min-width: 768px) {
+  .badge {
+    height: inherit;
   }
 }
 
@@ -322,7 +326,7 @@ a:visited {
 
 /* -- DESKTOP -- */
 /* -- DESKTOP - Navigation -- */
-@media (min-width: 1023px) {
+@media (min-width: 992px) {
   .navigation-burger {
     display: none;
   }
