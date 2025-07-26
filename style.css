@@ -5,7 +5,7 @@ Author: Matej Pecho
 
 */
 
-/* -- CSS -- */
+/* -- Common -- */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +16,8 @@ Author: Matej Pecho
 :root {
   --brownColor: #33292a;
   --backgroundColor: #644b4f;
+  --linkColor: #efa69d;
+  --linkColorHover: #e9877b;
 }
 
 h1 {
@@ -135,6 +137,7 @@ a:visited {
   margin-top: 40px;
 }
 
+/* -- Our trips -- */
 .our-trips-content {
   display: flex;
   flex-direction: column;
@@ -164,6 +167,7 @@ a:visited {
   justify-content: center;
 }
 
+/* -- Where to go -- */
 .where-to-go {
   background-color: var(--backgroundColor);
   color: white;
@@ -184,6 +188,7 @@ a:visited {
   background-color: var(--brownColor);
 }
 
+/* -- Reviews -- */
 .reviews {
   text-align: center;
 }
@@ -197,6 +202,36 @@ a:visited {
   margin-top: 67px;
 }
 
+/* -- Footer -- */
+.footer-images {
+  display: grid;
+}
+
+.footer-images img {
+  height: 260px;
+  object-fit: cover;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+  background-color: #333333;
+  text-align: center;
+}
+
+.footer-text h3 a {
+  color: var(--linkColor);
+}
+.footer-text h3 a:hover {
+  color: var(--linkColorHover);
+}
+
+.footer-text p {
+  color: #fff;
+}
+
 @media (min-width: 391px) {
   .section-wrapper {
     margin: 0 auto;
@@ -205,7 +240,7 @@ a:visited {
 }
 
 /* TABLET */
-/* -- TABLET - About us section -- */
+/* -- TABLET/DESKTOP - About us section -- */
 @media (min-width: 768px) {
   .about-us-content {
     display: flex;
@@ -224,7 +259,7 @@ a:visited {
   }
 }
 
-/* -- TABLET - What we do section -- */
+/* -- TABLET/DESKTOP - What we do section -- */
 @media (min-width: 768px) {
   .what-do-activities {
     flex-direction: row;
@@ -244,7 +279,7 @@ a:visited {
   }
 }
 
-/* -- TABLET - Where to go -- */
+/* -- TABLET/DESKTOP - Where to go -- */
 @media (min-width: 768px) {
   .where-to-go-content {
     display: flex;
@@ -256,7 +291,7 @@ a:visited {
   }
 }
 
-/* -- TABLET - Reviews -- */
+/* -- TABLET/DESKTOP - Reviews -- */
 @media (min-width: 768px) {
   .reviews-row {
     display: flex;
@@ -271,6 +306,17 @@ a:visited {
   }
   .reviews-content > p {
     width: 374px;
+    margin: 23px auto;
+  }
+}
+
+/* -- TABLET/DESKTOP - Footer -- */
+@media (min-width: 768px) {
+  .footer-images {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-images img {
+    height: 400px;
   }
 }
 
